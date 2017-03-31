@@ -2,7 +2,7 @@
 //万盈金融 自动投标 需要改时间 var minute=29,second=28;
 //javascript:
 (function(){
-	var hour=17,minute=59,second=30,money=10000;
+	var hour=10,minute=59,second=30,money=10000;
 	function getTime(hour,minute,second){
 		var d = new Date();
 		d.setHours(hour);
