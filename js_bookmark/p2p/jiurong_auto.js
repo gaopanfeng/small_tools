@@ -4,21 +4,26 @@
 //javascript:
 (function(){
 	var money = 10000,ver='';
-	var hour = 15,minite = 30,second = 1;
+	var hour = 0,minite = 0,second = 0;
 	function getTime(hour,minute,second){
 		var d = new Date();
 		d.setHours(hour);
 		d.setMinutes(minute);
 		d.setSeconds(second);
+		console.log(d);
+		alert(d);
 		return d;
 	}
 	function jian(timepoint,seconds){
 		var d = new Date(timepoint - seconds*1000);
+		console.log(d);
 		return d;
 	}
 	var $money = $('#getketou'),$ver = $('#captcha'),$verifyImg=$('#verifyImg');
 	var timepoint = getTime(hour,minite,second).getTime();
-	var timeclickver = jian(timepoint,5).getTime();
+	var timeclickver = jian(timepoint,15).getTime();
+
+
 
 	function run(){
 		$money.val(money);
