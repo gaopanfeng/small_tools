@@ -1,4 +1,4 @@
-/**  一起好
+/**
 auto invest
 */
 //javascript:
@@ -16,21 +16,22 @@ auto invest
 			$btn_agree.click();
 		}
 		$btn_submit.click();
-	}
+	};
 	function loop(func,timeout){
+		console.log(new Date());
 		setTimeout(function(){
-			var ret = func
+			var ret = func();
 			if(ret){
 				loop(func,timeout);
 			}
 		},timeout);
 		
-	}
+	};
 	function check(){
-		if($btn_submit.text() == '立即抢购'){
+		if($btn_submit.text().trim() == '立即抢购'){
 			return true;
 		}
-	}
+	};
 	loop(function(){
 		if(check()){
 			run();
