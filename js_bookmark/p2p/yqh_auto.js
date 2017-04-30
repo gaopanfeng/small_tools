@@ -12,10 +12,14 @@ auto invest
 			$('.avcredit input').click();
 		}
 		$btn_max.click();
-		if(!$btn_agree.prop('checked')){
+		
+		while(!$btn_agree.prop('checked')){
 			$btn_agree.click();
 		}
-		$btn_submit.click();
+		while(!$btn_submit.prop("disabled")){
+			$btn_submit.click();
+			return;
+		}
 	};
 	function loop(func,timeout){
 		console.log(new Date());
