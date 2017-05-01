@@ -13,13 +13,14 @@ auto invest
 		}
 		$btn_max.click();
 		
-		while(!$btn_agree.prop('checked')){
-			$btn_agree.click();
-		}
-		while(!$btn_submit.prop("disabled")){
+		$btn_agree.prop('disabled',false);
+		$btn_agree.click();
+		
+		$btn_submit.prop("disabled",false);
+		$btn_submit.click();
+		setTimeout(function(){
 			$btn_submit.click();
-			return;
-		}
+		},1000)
 	};
 	function loop(func,timeout){
 		console.log(new Date());
