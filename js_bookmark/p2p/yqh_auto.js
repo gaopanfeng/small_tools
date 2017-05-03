@@ -1,5 +1,6 @@
 /**
 auto invest
+$btn_max.click();  授信额度变为5w
 */
 //javascript:
 (function(){
@@ -13,7 +14,8 @@ auto invest
 			$btn_shouxin.click();
 		}
 
-		$btn_max.click();
+		
+		$btn_number.val(10000);
 		$btn_number.focus();
 		if($btn_number.val() < 10000){
 			alert("金额小于10000");
