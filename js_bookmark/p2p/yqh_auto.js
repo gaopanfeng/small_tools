@@ -4,6 +4,7 @@ $btn_max.click();  授信额度变为5w
 */
 //javascript:
 (function(){
+	var money = 10000;
 	var $btn_shouxin = $('.avcredit input');
 	var $btn_max = $('.money>a');
 	var $btn_agree = $('.detail-bid form>label>input');
@@ -15,9 +16,9 @@ $btn_max.click();  授信额度变为5w
 		}
 
 		
-		$btn_number.val(10000);
+		$btn_number.val(money);
 		$btn_number.focus();
-		if($btn_number.val() < 10000){
+		if($btn_number.val() < money){
 			alert("金额小于10000");
 			return;
 		}
@@ -53,9 +54,6 @@ $btn_max.click();  授信额度变为5w
 	loop(function(){
 		if(check()){
 			run();
-			for(var i=1;i<=10;i++){
-				runtimeout(1000*i);	
-			}
 			return false;
 		}
 		return true;
