@@ -4,7 +4,7 @@ $btn_max.click();  授信额度变为5w
 */
 //javascript:
 (function(){
-	var money = 10000;
+	var money = 20000;
 	var $btn_shouxin = $('.avcredit input');
 	var $btn_max = $('.money>a');
 	var $btn_agree = $('.detail-bid form>label>input');

@@ -3,7 +3,7 @@
 */
 //javascript:
 (function(){
-	var money = 10000,ver='';
+	var money = 50000,ver='';
 	var hour = 0,minite = 0,second = 0;
 	function getTime(hour,minute,second){
 		var d = new Date();
@@ -21,7 +21,7 @@
 	}
 	var $money = $('#getketou'),$ver = $('#captcha'),$verifyImg=$('#verifyImg');
 	var timepoint = getTime(hour,minite,second).getTime();
-	var timeclickver = jian(timepoint,15).getTime();
+	var timeclickver = jian(timepoint,30).getTime();
 
 
 
