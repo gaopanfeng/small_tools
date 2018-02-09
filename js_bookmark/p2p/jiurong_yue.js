@@ -1,7 +1,7 @@
 // 论坛积分
 //javascript:
 (function(){
-	var hour=0,minute=0,second=2;
+	var hour=0,minute=0,second=0;
 	function check(){
 		var d = new Date();
 		return d.getHours()===hour && d.getMinutes()>=minute && d.getSeconds()>=second;
