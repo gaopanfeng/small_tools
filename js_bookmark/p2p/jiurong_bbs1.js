@@ -3,7 +3,7 @@
 (function(){
 
     function run(){
-        var w = window.open('http://bbs.jiurong.com/forum.php?mod=post&action=newthread&fid=59');
+        var w = window.open('http://bbs.jiurong.com/forum.php?mod=forumdisplay&fid=59');
         var closenum = 0;
         w.onunload = function(){
             closenum++;
@@ -13,7 +13,17 @@
             }
         };
         setTimeout(function() {
+            w.scrollTo(0,10000);
+            w.$('fastpostmessage').value = '签到签到';
             w.$('subject').value='签到签到';
+            var hash = w.document.getElementsByName('sechash')[0].value;
+            w.updateseccode(hash);
+            w.$('seccode'+hash+'_menu').style.display='block';
+            var a = w.prompt("验证码","");
+            if(a){
+                w.$('seccodeverify_'+hash).value=a;
+                w.$('fastpostsubmit').click();
+            }
         }, 3000);
     }
     run();
