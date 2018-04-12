@@ -2,7 +2,7 @@
 (function(){
 	function parseItem($item){
 		var lilv = parseFloat($item.find('td:eq(3)').html());
-		var money = parseFloat($item.children('td:eq(7)').find('tr:eq(1) td:eq(1)').html().replace('回收本金：','').replace(/,/g,''));
+		var money = parseFloat($item.children('td:eq(7)').find('tr:eq(1) td:eq(1)').html().replace('本金：','').replace(/,/g,''));
 		return {money:money,lilv:lilv}
 	}
 	function compute(list){
@@ -39,8 +39,6 @@
 	$items = [].slice.apply($items).map((e)=>$(e));
 	var items = $items.map(parseItem);
 	var all = storeList(index,items);
-	alert(all.length);
-	alert(JSON.stringify(all));
 	if(index===max-1){
 		compute(all);
 	}else{

@@ -9,6 +9,9 @@ $btn_max.click();  授信额度变为5w
 	var $btn_agree = $('.detail-bid form>label>input');
 	var $btn_submit = $('.detail-bid form button[type=submit]');
 	var $btn_number = $('.detail-bid form input[type=number]').eq(0);
+	var $div_captcha = $('.detail-bid form .captcha');
+    var $input_captcha = $('.detail-bid form .captcha input');
+    $div_captcha.show();
 	function run(){
 		$btn_max.click();
 		$btn_number.focus();
@@ -22,7 +25,12 @@ $btn_max.click();  授信额度变为5w
 		while(!$btn_agree.prop("checked")){
 			$btn_agree.click();
 		}
-		
+		if(!$input_captcha.val()){
+            $input_captcha.focus();
+            return;
+		}
+        $btn_submit.prop("disabled",false);
+        $btn_submit.click();
 		
 	}
 	function last(){
