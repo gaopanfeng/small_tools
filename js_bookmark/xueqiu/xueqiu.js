@@ -12,7 +12,11 @@
             });
         }
     });
-    alert(data.map(it=>`${it.date}\t${it.type}\t${it.price}`).join('\n'));
+    let ret = data.map(it => `${it.date}\t${it.type}\t${it.price}`).join('\n');
+    let $text = $('<textarea></textarea>');
+    $('body').append($text);
+    $text.val(ret)
+    alert(ret);
 })();
 
 
