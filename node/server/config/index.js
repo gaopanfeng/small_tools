@@ -6,7 +6,7 @@ console.log(env);
 
 module.exports = {
     sms: {
-        "url": "http://sms.sogou/portal/mobile/smsproxy.php",
-        "appid": "zhongyi"
+        "url": "http://xxxx",
+        "appid": "xxxx"
     }
 }
