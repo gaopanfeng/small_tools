@@ -1,10 +1,10 @@
 //javascript:
 (function () {
-    let $list = $('.moni__position__stock__transactions table tr');
-    let data=[];
+    var $list = $('.moni__position__stock__transactions table tr');
+    var data=[];
     $list.each((i,e)=>{
         if(i>0){
-            let $tds = $(e).find('td');
+            var $tds = $(e).find('td');
             data.push({
                 date:$tds.eq(0).html(),
                 type:$tds.eq(1).html(),
@@ -12,8 +12,8 @@
             });
         }
     });
-    let ret = data.map(it => `${it.date}\t${it.type}\t${it.price}`).join('\n');
-    let $text = $('<textarea></textarea>');
+    var ret = data.map(it => `${it.date}\t${it.type}\t${it.price}`).join('\n');
+    var $text = $('<textarea></textarea>');
     $('body').append($text);
     $text.val(ret)
     alert(ret);
