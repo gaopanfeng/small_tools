@@ -15,7 +15,7 @@
     var ret = data.map(it => `${it.date}\t${it.type}\t${it.price}`).join('\n');
     var $text = $('<textarea></textarea>');
     $('body').append($text);
-    $text.val(ret)
+    $text.val(ret);
     alert(ret);
 })();
 
